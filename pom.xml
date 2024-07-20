@@ -11,7 +11,7 @@
     <groupId>com.ashokit</groupId>
     <artifactId>02-Mini_Project_FrontOffice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>02-Mini_Project_FrontOffice</name>
     <description>Demo project for Spring Boot</description>
     <properties>
