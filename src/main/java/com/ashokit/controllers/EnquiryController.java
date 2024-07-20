@@ -3,8 +3,9 @@ package com.ashokit.controllers;
 import java.util.List;
 import java.util.Optional;
 
-import javax.servlet.http.HttpSession;
 
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,13 +22,15 @@ import com.ashokit.repo.StudentEnquiryRepo;
 import com.ashokit.service.EnquiryService;
 
 @Controller
+@RequiredArgsConstructor
 public class EnquiryController {
 
 	@Autowired
 	private StudentEnquiryRepo repo;
 
+
 	@Autowired
-	private HttpSession session;
+   	private HttpSession session;
 
 	@Autowired
 	private EnquiryService service;
@@ -140,12 +143,17 @@ public class EnquiryController {
 			@RequestParam String status, @RequestParam String classMode, Model model) {
 
 		EnquirySearchCriteria criteria = new EnquirySearchCriteria();
+//
+//		criteria.setCourse(course);
+//
+//		criteria.setClassMode(classMode);
+//
+//		criteria.setStatus(status);
 
 		criteria.setCourse(course);
-
 		criteria.setClassMode(classMode);
-
 		criteria.setStatus(status);
+
 
 		System.out.println(criteria);
 

@@ -2,15 +2,8 @@ package com.ashokit.entity;
 
 import java.time.LocalDate;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.stereotype.Component;
@@ -38,7 +31,7 @@ public class StudentEnquiry {
 	@UpdateTimestamp
 	private LocalDate endDate;
 	
-	@ManyToOne(cascade=CascadeType.ALL )
+	@ManyToOne(cascade= CascadeType.ALL )
 	@JoinColumn(name="userId")
 	private UserDetails userDetails;
 

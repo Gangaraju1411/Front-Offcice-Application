@@ -2,14 +2,8 @@ package com.ashokit.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -40,7 +34,7 @@ public class UserDetails {
 	private String accountStatus;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch =FetchType.EAGER,mappedBy ="userDetails")
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy ="userDetails")
 	private List<StudentEnquiry> studentEnquiry ;
 
 }

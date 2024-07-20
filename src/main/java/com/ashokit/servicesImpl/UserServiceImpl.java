@@ -2,9 +2,9 @@ package com.ashokit.servicesImpl;
 
 import java.beans.Beans;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +20,7 @@ import com.ashokit.util.EmailUtils;
 import com.ashokit.util.PasswordUtils;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
 	@Autowired
@@ -31,6 +32,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private EmailUtils mail;
 	
+
 	@Autowired
 	private HttpSession session;
 
